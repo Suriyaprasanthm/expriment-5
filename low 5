@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    char str[100];
+    int i;
+
+    // Input the string
+    printf("Input a string: ");
+    scanf("%s", str);
+
+    // Loop through each character in the string
+    for (i = 0; str[i] != '\0'; i++) {
+        // Check if the character is a vowel
+        if (str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || 
+            str[i] == 'o' || str[i] == 'u') {
+            // Convert to uppercase
+            str[i] = str[i] - 32; // ASCII value manipulation
+        }
+    }
+
+    // Output the result
+    printf("Output: %s\n", str);
+
+    return 0;
+}
